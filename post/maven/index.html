@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Maven // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Maven"/>
+<meta name="twitter:description" content="Maven  1.什么是Maven
+​	Maven是一个项目管理工具，它包含一个项目对象模型(POM:Project Object Model),一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中插件(plugin)目标(goal)的逻辑。
+2.核心功能之依赖管理
+3.核心功能之一键构建
+​	*什么是构建：
+​	构建是指项目从编译，测试，运行，打包，安装，部署整个过程都交给maven进行管理，这个过程称为构建。
+​	*什么是一键构建
+​	指的是整个构建过程中，使用maven一个命令可以轻松完成整个工作。
+​	4.Maven的安装（下载Maven安装包并解压）
+​	bin目录下的mvn：用于构建项目。
+​	boot：Maven自身运行所需要的类加载器
+​	conf中的settings.xml：对Maven进行配置时所使用的主要的配置文件
+​	lib：Maven自身运行所需要的jar包
+​
+​	Maven的安装：
+​	1.复制Maven解压后的目录，打开我的电脑，属性&ndash;&gt;高级系统设置&ndash;&gt;环境变量(系统变量中)，新建一个变量，变量名：MAVEN_HOME 变量值：所复制的目录。
+​	2.进入Path环境变量，新建一个%MAVEN_HOME%\bin
+​	3.Maven运行需要Java，必须确保环境变量中有JAVA_HOME。
+​	4.检验安装是否成功：打开命令窗口，输入mvn -version或mvn -v，出现maven相关信息，即说明Maven安装成功。
+5.修改仓库位置
+​	进入Maven的config目录下的settings.xml，找到
+​
+&lt;!--localRepository | The path to the local repository maven will use to store artifacts. | | Default: ${user.home}/.m2/repository &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt; 将其中的‘/path/to/local/repo’标签中的内容替换为自定义仓库的位置
+6.仓库的分类
+7.Maven项目标准目录结构"/>
+
+    <meta property="og:title" content="Maven" />
+<meta property="og:description" content="Maven  1.什么是Maven
+​	Maven是一个项目管理工具，它包含一个项目对象模型(POM:Project Object Model),一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中插件(plugin)目标(goal)的逻辑。
+2.核心功能之依赖管理
+3.核心功能之一键构建
+​	*什么是构建：
+​	构建是指项目从编译，测试，运行，打包，安装，部署整个过程都交给maven进行管理，这个过程称为构建。
+​	*什么是一键构建
+​	指的是整个构建过程中，使用maven一个命令可以轻松完成整个工作。
+​	4.Maven的安装（下载Maven安装包并解压）
+​	bin目录下的mvn：用于构建项目。
+​	boot：Maven自身运行所需要的类加载器
+​	conf中的settings.xml：对Maven进行配置时所使用的主要的配置文件
+​	lib：Maven自身运行所需要的jar包
+​
+​	Maven的安装：
+​	1.复制Maven解压后的目录，打开我的电脑，属性&ndash;&gt;高级系统设置&ndash;&gt;环境变量(系统变量中)，新建一个变量，变量名：MAVEN_HOME 变量值：所复制的目录。
+​	2.进入Path环境变量，新建一个%MAVEN_HOME%\bin
+​	3.Maven运行需要Java，必须确保环境变量中有JAVA_HOME。
+​	4.检验安装是否成功：打开命令窗口，输入mvn -version或mvn -v，出现maven相关信息，即说明Maven安装成功。
+5.修改仓库位置
+​	进入Maven的config目录下的settings.xml，找到
+​
+&lt;!--localRepository | The path to the local repository maven will use to store artifacts. | | Default: ${user.home}/.m2/repository &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt; 将其中的‘/path/to/local/repo’标签中的内容替换为自定义仓库的位置
+6.仓库的分类
+7.Maven项目标准目录结构" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/maven/" />
+<meta property="article:published_time" content="2020-01-12T22:17:12+08:00" />
+<meta property="article:modified_time" content="2020-01-12T22:17:12+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Maven</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 12, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="maven">Maven</h3>
+<hr>
+<p>1.什么是Maven</p>
+<p>​		Maven是一个项目管理工具，它包含一个项目对象模型(POM:Project Object Model),一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中插件(plugin)目标(goal)的逻辑。</p>
+<p>2.核心功能之依赖管理</p>
+<p><img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110203524.jpg" alt="QQ图片20191110203524"></p>
+<p>3.核心功能之一键构建</p>
+<p>​		*什么是构建：</p>
+<p>​				构建是指项目从编译，测试，运行，打包，安装，部署整个过程都交给maven进行管理，这个过程称为构建。</p>
+<p>​		*什么是一键构建</p>
+<p>​				指的是整个构建过程中，使用maven一个命令可以轻松完成整个工作。</p>
+<p>​	<img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110204358.jpg" alt="QQ图片20191110204358"></p>
+<p>4.Maven的安装（下载Maven安装包并解压）</p>
+<p>​	bin目录下的mvn：用于构建项目。</p>
+<p>​	boot：Maven自身运行所需要的类加载器</p>
+<p>​	conf中的settings.xml：对Maven进行配置时所使用的主要的配置文件</p>
+<p>​	lib：Maven自身运行所需要的jar包</p>
+<p>​</p>
+<p>​	Maven的安装：</p>
+<p>​			1.复制Maven解压后的目录，打开我的电脑，属性&ndash;&gt;高级系统设置&ndash;&gt;环境变量(系统变量中)，新建一个变量，变量名：MAVEN_HOME  变量值：所复制的目录。</p>
+<p>​			2.进入Path环境变量，新建一个%MAVEN_HOME%\bin</p>
+<p>​			3.Maven运行需要Java，必须确保环境变量中有JAVA_HOME。</p>
+<p>​			4.检验安装是否成功：打开命令窗口，输入mvn -version或mvn -v，出现maven相关信息，即说明Maven安装成功。</p>
+<p>5.修改仓库位置</p>
+<p>​		进入Maven的config目录下的settings.xml，找到</p>
+<p>​</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> localRepository
+</span><span style="color:#75715e">   | The path to the local repository maven will use to store artifacts.
+</span><span style="color:#75715e">   |
+</span><span style="color:#75715e">   | Default: ${user.home}/.m2/repository
+</span><span style="color:#75715e">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;
+</span></code></pre></div><p>将其中的‘<!-- raw HTML omitted -->/path/to/local/repo<!-- raw HTML omitted -->’标签中的内容替换为自定义仓库的位置</p>
+<p>6.仓库的分类</p>
+<p><img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110210030.jpg" alt="QQ图片20191110210030"></p>
+<p>7.Maven项目标准目录结构</p>
+<p>​	src/main/java目录：核心代码部分</p>
+<p>​	src/main/resources：配置文件部分</p>
+<p>​	src/test/java目录：测试代码部分</p>
+<p>​	src/test/resources：测试配置文件</p>
+<p>​	src/main/webapps：页面资源，js，css，图片等(如果是web项目，有这个目录)</p>
+<p>8.常用命令</p>
+<p>​	clean   compile  test   package    install    deploy</p>
+<p><img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110210755.jpg" alt="QQ图片20191110210755"></p>
+<p>默认生命周期中，后面的一定经历过前面的过程。</p>
+<p>9.Maven概念模型图</p>
+<p><img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110211018.jpg" alt="QQ图片20191110211018"></p>
+<p>10.Maven解决jar包冲突</p>
+<p>​	添加<!-- raw HTML omitted --><!-- raw HTML omitted -->作用域，添加规则：</p>
+<p>​	<img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110211355.jpg" alt="QQ图片20191110211355"></p>
+<p>对于98%的依赖，默认作用域都是compile，只有对于特殊的，如上述列出的Junit,servlet等，才需要添加特殊的作用域</p>
+<p>11.添加依赖时，没有提示，容易忘记怎么办？</p>
+<p>​	IDEA中打开File&ndash;&gt;settings&ndash;&gt;Editor&ndash;&gt;Live Templates</p>
+<p>​	<img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110213407.png" alt="QQ图片20191110213407"></p>
+<p><img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110213430.png" alt="QQ图片20191110213430"></p>
+<p><img src="D:%5Cweb%E7%AC%94%E8%AE%B0%5C%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%5CQQ%E5%9B%BE%E7%89%8720191110213434.png" alt="QQ图片20191110213434"></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

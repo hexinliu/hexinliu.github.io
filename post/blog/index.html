@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Tomcat // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tomcat"/>
+<meta name="twitter:description" content="Tomcat配置：
+​	*部署项目的方式：
+​	1.直接将项目放到webapps目录下
+​	*简化部署：将项目打成一个war包，再将war包放置到webapps目录下(war包会自动解压)
+​	2.配置conf/server.xml文件
+​	在标签体中配置
+​	例子：	​	*docBase:项目存放的路径
+​	*path:虚拟目录
+​	3.在conf\Catalina\localhost创建任意名称的xml文件，在文件中编写
+​	​	*虚拟目录：xml文件的名称
+​	*静态项目和动态项目
+​	*目录结构
+​	java动态项目的目录结构：
+​	&ndash;项目的根目录:
+​	&ndash;WEB-INF目录:
+​	&ndash;web.xml：web项目的核心配置文件
+​	&ndash;classes目录：放置字节码文件的目录
+​	&ndash;lib目录：放置依赖的jar包
+IDEA与Tomcat相关配置
+​	1.IDEA会为每一个Tomcat部署的项目单独建立一份配置文件
+​	查看控制台的log：Using CATALINA_BASE: &ldquo;C:\Users\16422.IntelliJIdea2019.1\system\tomcat\Tomcat_8_5_47_JavaWeb_Tomcat&rdquo;
+​	2.工作空间项目 和 Tomcat部署的web项目
+​	*Tomcat真正访问的是“Tomcat部署的web项目”，“Tomcat部署的web项目”对应着“工作空间项目”的web目录下的所有资源
+​	*WEB-INF目录下的资源不能被浏览器直接访问
+​	3.断点调试：使用“小虫子”启动debug"/>
+
+    <meta property="og:title" content="Tomcat" />
+<meta property="og:description" content="Tomcat配置：
+​	*部署项目的方式：
+​	1.直接将项目放到webapps目录下
+​	*简化部署：将项目打成一个war包，再将war包放置到webapps目录下(war包会自动解压)
+​	2.配置conf/server.xml文件
+​	在标签体中配置
+​	例子：	​	*docBase:项目存放的路径
+​	*path:虚拟目录
+​	3.在conf\Catalina\localhost创建任意名称的xml文件，在文件中编写
+​	​	*虚拟目录：xml文件的名称
+​	*静态项目和动态项目
+​	*目录结构
+​	java动态项目的目录结构：
+​	&ndash;项目的根目录:
+​	&ndash;WEB-INF目录:
+​	&ndash;web.xml：web项目的核心配置文件
+​	&ndash;classes目录：放置字节码文件的目录
+​	&ndash;lib目录：放置依赖的jar包
+IDEA与Tomcat相关配置
+​	1.IDEA会为每一个Tomcat部署的项目单独建立一份配置文件
+​	查看控制台的log：Using CATALINA_BASE: &ldquo;C:\Users\16422.IntelliJIdea2019.1\system\tomcat\Tomcat_8_5_47_JavaWeb_Tomcat&rdquo;
+​	2.工作空间项目 和 Tomcat部署的web项目
+​	*Tomcat真正访问的是“Tomcat部署的web项目”，“Tomcat部署的web项目”对应着“工作空间项目”的web目录下的所有资源
+​	*WEB-INF目录下的资源不能被浏览器直接访问
+​	3.断点调试：使用“小虫子”启动debug" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/blog/" />
+<meta property="article:published_time" content="2020-01-12T16:03:41+08:00" />
+<meta property="article:modified_time" content="2020-01-12T16:03:41+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Tomcat</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 12, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>Tomcat配置：</p>
+<p>​		*部署项目的方式：</p>
+<p>​			1.直接将项目放到webapps目录下</p>
+<p>​					*简化部署：将项目打成一个war包，再将war包放置到webapps目录下(war包会自动解压)</p>
+<p>​			2.配置conf/server.xml文件</p>
+<p>​					在<!-- raw HTML omitted -->标签体中配置</p>
+<p>​				例子：	<!-- raw HTML omitted --></p>
+<p>​					*docBase:项目存放的路径</p>
+<p>​					*path:虚拟目录</p>
+<p>​			3.在conf\Catalina\localhost创建任意名称的xml文件，在文件中编写</p>
+<p>​				<!-- raw HTML omitted --></p>
+<p>​					*虚拟目录：xml文件的名称</p>
+<p>​		*静态项目和动态项目</p>
+<p>​				*目录结构</p>
+<p>​						java动态项目的目录结构：</p>
+<p>​								&ndash;项目的根目录:</p>
+<p>​									&ndash;WEB-INF目录:</p>
+<p>​										&ndash;web.xml：web项目的核心配置文件</p>
+<p>​										&ndash;classes目录：放置字节码文件的目录</p>
+<p>​										&ndash;lib目录：放置依赖的jar包</p>
+<p>IDEA与Tomcat相关配置</p>
+<p>​	1.IDEA会为每一个Tomcat部署的项目单独建立一份配置文件</p>
+<p>​				查看控制台的log：Using CATALINA_BASE:   &ldquo;C:\Users\16422.IntelliJIdea2019.1\system\tomcat\Tomcat_8_5_47_JavaWeb_Tomcat&rdquo;</p>
+<p>​	2.工作空间项目    和    Tomcat部署的web项目</p>
+<p>​				*Tomcat真正访问的是“Tomcat部署的web项目”，“Tomcat部署的web项目”对应着“工作空间项目”的web目录下的所有资源</p>
+<p>​				*WEB-INF目录下的资源不能被浏览器直接访问</p>
+<p>​	3.断点调试：使用“小虫子”启动debug</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

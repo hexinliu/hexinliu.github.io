@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://hexinliu.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jan 2020 22:17:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Maven</title>
+      <link>https://hexinliu.github.io/post/maven/</link>
+      <pubDate>Sun, 12 Jan 2020 22:17:12 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/maven/</guid>
+      <description>Maven  1.什么是Maven
+​	Maven是一个项目管理工具，它包含一个项目对象模型(POM:Project Object Model),一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中插件(plugin)目标(goal)的逻辑。
+2.核心功能之依赖管理
+3.核心功能之一键构建
+​	*什么是构建：
+​	构建是指项目从编译，测试，运行，打包，安装，部署整个过程都交给maven进行管理，这个过程称为构建。
+​	*什么是一键构建
+​	指的是整个构建过程中，使用maven一个命令可以轻松完成整个工作。
+​	4.Maven的安装（下载Maven安装包并解压）
+​	bin目录下的mvn：用于构建项目。
+​	boot：Maven自身运行所需要的类加载器
+​	conf中的settings.xml：对Maven进行配置时所使用的主要的配置文件
+​	lib：Maven自身运行所需要的jar包
+​
+​	Maven的安装：
+​	1.复制Maven解压后的目录，打开我的电脑，属性&amp;ndash;&amp;gt;高级系统设置&amp;ndash;&amp;gt;环境变量(系统变量中)，新建一个变量，变量名：MAVEN_HOME 变量值：所复制的目录。
+​	2.进入Path环境变量，新建一个%MAVEN_HOME%\bin
+​	3.Maven运行需要Java，必须确保环境变量中有JAVA_HOME。
+​	4.检验安装是否成功：打开命令窗口，输入mvn -version或mvn -v，出现maven相关信息，即说明Maven安装成功。
+5.修改仓库位置
+​	进入Maven的config目录下的settings.xml，找到
+​
+&amp;lt;!--localRepository | The path to the local repository maven will use to store artifacts. | | Default: ${user.home}/.m2/repository &amp;lt;localRepository&amp;gt;/path/to/local/repo&amp;lt;/localRepository&amp;gt; 将其中的‘/path/to/local/repo’标签中的内容替换为自定义仓库的位置
+6.仓库的分类
+7.Maven项目标准目录结构</description>
+    </item>
+    
+    <item>
+      <title>Tomcat</title>
+      <link>https://hexinliu.github.io/post/blog/</link>
+      <pubDate>Sun, 12 Jan 2020 16:03:41 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/blog/</guid>
+      <description>Tomcat配置：
+​	*部署项目的方式：
+​	1.直接将项目放到webapps目录下
+​	*简化部署：将项目打成一个war包，再将war包放置到webapps目录下(war包会自动解压)
+​	2.配置conf/server.xml文件
+​	在标签体中配置
+​	例子：	​	*docBase:项目存放的路径
+​	*path:虚拟目录
+​	3.在conf\Catalina\localhost创建任意名称的xml文件，在文件中编写
+​	​	*虚拟目录：xml文件的名称
+​	*静态项目和动态项目
+​	*目录结构
+​	java动态项目的目录结构：
+​	&amp;ndash;项目的根目录:
+​	&amp;ndash;WEB-INF目录:
+​	&amp;ndash;web.xml：web项目的核心配置文件
+​	&amp;ndash;classes目录：放置字节码文件的目录
+​	&amp;ndash;lib目录：放置依赖的jar包
+IDEA与Tomcat相关配置
+​	1.IDEA会为每一个Tomcat部署的项目单独建立一份配置文件
+​	查看控制台的log：Using CATALINA_BASE: &amp;ldquo;C:\Users\16422.IntelliJIdea2019.1\system\tomcat\Tomcat_8_5_47_JavaWeb_Tomcat&amp;rdquo;
+​	2.工作空间项目 和 Tomcat部署的web项目
+​	*Tomcat真正访问的是“Tomcat部署的web项目”，“Tomcat部署的web项目”对应着“工作空间项目”的web目录下的所有资源
+​	*WEB-INF目录下的资源不能被浏览器直接访问
+​	3.断点调试：使用“小虫子”启动debug</description>
+    </item>
+    
+  </channel>
+</rss>

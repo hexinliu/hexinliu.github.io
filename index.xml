@@ -6,10 +6,38 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2020 22:17:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 15:24:13 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>windows&#43;hugo&#43;github搭建个人博客</title>
+      <link>https://hexinliu.github.io/post/df/</link>
+      <pubDate>Mon, 13 Jan 2020 15:24:13 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/df/</guid>
+      <description>windows + hugo + github 1.安装hugo hugo下载
+1.根据自己情况下载对应版本，下载完成之后解压待用
+2.创建一个文件夹，如在E盘创建hugo/bin,将解压出来的hugo.exe文件放入bin中
+3.配置系统环境变量，将E:\hugo\bin添加到path环境变量中（如果没有在环境变量中添加hugo可执行文件的路径的话，每一次都要写全hugo.exe的路径或者切换到hugo所在的目录，过于麻烦。而将该路径添加到环境变量中之后，可以在cmd中随便使用hugo命令了）
+注意：往path中添加的路径只要到hugo.exe所在的文件夹即可，不需要包含hugo.exe。
+ 以上工作进行完之后，检查是否操作成功，打开cmd，输入hugo version
+若出现：
+Hugo Static Site Generator v0.62.1-A1518704 windows/amd64 BuildDate: 2020-01-01T17:39:35Z 则说明安装且配置成功
+2.安装git 这个过程中需要用到git，关于git的安装和使用，网上有很多资料，这里不提
+git下载地址
+git下载和解压成功后，可以在解压后的文件夹中发现两个可执行文件，一个git-bash.exe和一个git-cmd.exe。(区别：bash是linux风格的命令行，路径也是linux式的，可以使用windows命令和linux命令；cmd是windows风格的命令行，可以使用windows命令)
+3.生成hugo博客站点 打开一个git命令行，进入E:\hugo下，敲命令:
+hugo new site 文件名称(如:myblog) 执行完这条命令之后，会在hugo目录下生成一个名为myblog的站点文件夹
+进入这个文件夹后，显示以下目录结构：
+ archetypes (存放default.md,头文件的格式，每次新建文章默认显示的头部信息在此修改) content (存放博客文章，Markdown格式的文件) data (存放自定义或者导入的模板) layouts (存放网站的数据模板) static (存放图片,js,css等静态资源) themes (存放主题文件，每一个主题都是一个独立的文件夹) config.toml （网站配置文件，如baseURL=“&amp;hellip;”作用是无论是在本地还是发布出去，图片的路径都是相对于baseURL而言的）  4.下载主题 hugo主题下载地址
+选定一个主题，点击进入，找到安装部分，如
+复制以上命令，即可将主题clone到本地的themes文件夹下（themes下的每一个文件夹都是一个主题）
+5.在本地启动站点 hugo server -t 已下载的主题名称(如prologue) --buildDrafts 这时候便可以对图中的地址进行访问了但这时候站点是空的，什么都没有
+6.写一篇博客 回到E:\hugo\myblog&amp;gt;,执行
+hugo new post/myFirstBlog.md 这个命令的意思是在content目录下，创建一个post目录，再在post目录下创建了一个名为myFirstBlog的博客文件，以后写博客就用这个命令(或者用hugo new gg.</description>
+    </item>
     
     <item>
       <title>Maven</title>

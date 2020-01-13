@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hexinliu.github.io/post/maven/</loc>
-    <lastmod>2020-01-12T22:17:12+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://hexinliu.github.io/</loc>
-    <lastmod>2020-01-12T22:17:12+08:00</lastmod>
+    <lastmod>2020-01-13T15:24:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hexinliu.github.io/post/</loc>
+    <lastmod>2020-01-13T15:24:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hexinliu.github.io/post/df/</loc>
+    <lastmod>2020-01-13T15:24:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hexinliu.github.io/post/maven/</loc>
     <lastmod>2020-01-12T22:17:12+08:00</lastmod>
   </url>
   

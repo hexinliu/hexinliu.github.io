@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Welcome</title>
     <link>https://hexinliu.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jan 2020 15:24:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 17:30:20 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo常用命令</title>
+      <link>https://hexinliu.github.io/post/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 13 Jan 2020 17:30:20 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>Hugo 安装配置文档地址： https://blog.51cto.com/michaelkang/2364007 本文环境介绍 #hugo 版本 version Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z #go 版本 go version go1.11.5 linux/amd64 #系统版本 more /etc/redhat-release CentOS Linux release 7.6.1810 (Core) #版本和环境详细信息 hugo env Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z GOOS=&amp;quot;linux&amp;quot; GOARCH=&amp;quot;amd64&amp;quot; GOVERSION=&amp;quot;go1.11.5&amp;quot; 初始化站点 始化一个站点目录 www.datals.com
+hugo new site /www.datals.com 目录结构介绍： cd /www.datals.com/ ll ▸ archetypes/ #包括内容类型，在创建新内容时自动生成内容的配置 ▸ content/ # 网站内容，全部使用markdown格式 ▸ layouts/ # 网站模板文件，决定内容如何呈现 ▸ static/ # 图片、css、js 等静态资源 ▸ themes/ # 存放主题 config.</description>
+    </item>
     
     <item>
       <title>windows&#43;hugo&#43;github搭建个人博客</title>

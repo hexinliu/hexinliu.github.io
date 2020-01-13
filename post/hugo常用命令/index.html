@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hugo常用命令 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo常用命令"/>
+<meta name="twitter:description" content="Hugo 安装配置文档地址： https://blog.51cto.com/michaelkang/2364007 本文环境介绍 #hugo 版本 version Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z #go 版本 go version go1.11.5 linux/amd64 #系统版本 more /etc/redhat-release CentOS Linux release 7.6.1810 (Core) #版本和环境详细信息 hugo env Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z GOOS=&quot;linux&quot; GOARCH=&quot;amd64&quot; GOVERSION=&quot;go1.11.5&quot; 初始化站点 始化一个站点目录 www.datals.com
+hugo new site /www.datals.com 目录结构介绍： cd /www.datals.com/ ll ▸ archetypes/ #包括内容类型，在创建新内容时自动生成内容的配置 ▸ content/ # 网站内容，全部使用markdown格式 ▸ layouts/ # 网站模板文件，决定内容如何呈现 ▸ static/ # 图片、css、js 等静态资源 ▸ themes/ # 存放主题 config."/>
+
+    <meta property="og:title" content="Hugo常用命令" />
+<meta property="og:description" content="Hugo 安装配置文档地址： https://blog.51cto.com/michaelkang/2364007 本文环境介绍 #hugo 版本 version Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z #go 版本 go version go1.11.5 linux/amd64 #系统版本 more /etc/redhat-release CentOS Linux release 7.6.1810 (Core) #版本和环境详细信息 hugo env Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z GOOS=&quot;linux&quot; GOARCH=&quot;amd64&quot; GOVERSION=&quot;go1.11.5&quot; 初始化站点 始化一个站点目录 www.datals.com
+hugo new site /www.datals.com 目录结构介绍： cd /www.datals.com/ ll ▸ archetypes/ #包括内容类型，在创建新内容时自动生成内容的配置 ▸ content/ # 网站内容，全部使用markdown格式 ▸ layouts/ # 网站模板文件，决定内容如何呈现 ▸ static/ # 图片、css、js 等静态资源 ▸ themes/ # 存放主题 config." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<meta property="article:published_time" content="2020-01-13T17:30:20+08:00" />
+<meta property="article:modified_time" content="2020-01-13T17:30:20+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hugo常用命令</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 13, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="hugo-">Hugo 安装配置文档地址：</h3>
+<pre><code>https://blog.51cto.com/michaelkang/2364007
+</code></pre><h3 id="heading">本文环境介绍</h3>
+<pre><code>#hugo 版本
+version
+
+Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z
+
+#go 版本
+go version go1.11.5 linux/amd64
+
+#系统版本
+more /etc/redhat-release 
+CentOS Linux release 7.6.1810 (Core) 
+
+#版本和环境详细信息
+hugo env
+
+Hugo Static Site Generator v0.54.0 linux/amd64 BuildDate: 2019-02-22T08:11:04Z
+GOOS=&quot;linux&quot;
+GOARCH=&quot;amd64&quot;
+GOVERSION=&quot;go1.11.5&quot;
+</code></pre><h2 id="heading-1">初始化站点</h2>
+<h3 id="heading-2">始化一个站点目录</h3>
+<p><a href="http://www.datals.com">www.datals.com</a></p>
+<pre><code>hugo new site /www.datals.com
+</code></pre><h3 id="heading-3">目录结构介绍：</h3>
+<pre><code>cd /www.datals.com/
+ll
+
+  ▸ archetypes/ #包括内容类型，在创建新内容时自动生成内容的配置
+  ▸ content/    # 网站内容，全部使用markdown格式
+  ▸ layouts/    # 网站模板文件，决定内容如何呈现
+  ▸ static/     # 图片、css、js 等静态资源
+  ▸ themes/     # 存放主题
+    config.toml   # 是网站的主配置文件
+</code></pre><h3 id="heading-4">常用命令介绍</h3>
+<pre><code>#使用方法:
+  hugo
+  hugo [flags]
+  hugo [command]
+  hugo [command] [flags]
+
+#查看版本
+hugo version
+
+#版本和环境详细信息
+hugo env
+
+#创建新站点
+hugo new site &quot;$mysite&quot;
+
+#创建文章
+hugo new index.md  
+
+在content/文件夹可以看到，此时多了一个markdown格式的文件index.md，打开文件可以看到时间和文件名等信息已经自动加到文件开头，包括创建时间，页面名，是否为草稿等。
+
+#编译生成静态文件
+hugo
+
+Hugo将编译所有文件并输出到public目录     
+
+#编译生成静态文件并启动web服务
+hugo server
+</code></pre><h3 id="heading-5">常用参数介绍</h3>
+<pre><code>  --bind=&quot;127.0.0.1&quot;    服务监听IP地址；
+  -p, --port=1313       服务监听端口；
+  -w, --watch[=true]      监听站点目录，发现文件变更自动编译；
+  -D, --buildDrafts     包括被标记为draft的文章；
+  -E, --buildExpired    包括已过期的文章；
+  -F, --buildFuture     包括将在未来发布的文章；
+  -b, --baseURL=&quot;www.datals.com&quot;  服务监听域名；
+  --log[=false]:           开启日志；
+  --logFile=&quot;/var/log/hugo.log&quot;:          log输出路径；
+  -t, --theme=&quot;&quot;          指定主题；
+  -v, --verbose[=false]: 输出详细信息
+</code></pre><h3 id="heading-6">常用使用参数组合</h3>
+<pre><code>hugo server -t hyde --buildDrafts --baseURL=http://www.datals.com  --bind=0.0.0.0 --port=80 -w
+</code></pre><pre><code> -t hyde        使用hyde主题，如果使用-t 选择了主题会将当前默认的主题覆盖；
+ --buildDrafts参数将生成被标记为草稿的页面，是否发布：hugo 会忽略所有通过 draft: true 标记为草稿的文件。必须改为 draft: false 才会编译进 HTML 文件。
+ --baseURL=http://www.datals.com   站点监听域名
+ --bind=0.0.0.0   监听全部网段
+ --port=80        服务监听端口
+ -w               如果修改了网站内的信息，会直接显示在浏览器的页面上，不需要重新运行hugo server，方便我们进行修改。  
+</code></pre><h3 id="hugo">hugo命令使用方法详解</h3>
+<pre><code>执行hugo命令，站点目录下会新建文件夹public/，生成的所有静态网站页面都会存储到这个目录，
+如果使用Github pages来作为博客的Host，你只需要将public/里的文件上传就可以。
+如果使用nginx作为web服务配置root dir 指向public/ 即可；
+</code></pre><p>转载自：https://blog.51cto.com/michaelkang/2364096</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -125,11 +125,11 @@ hugo new post/myFirstBlog.md 这个命令的意思是在content目录下，创�
 <h3 id="4">4.下载主题</h3>
 <p><a href="https://themes.gohugo.io/">hugo主题下载地址</a></p>
 <p>选定一个主题，点击进入，找到安装部分，如</p>
-<p><img src="img/hugo/QQ%E5%9B%BE%E7%89%8720200113143929.png" alt="QQ图片20200113143929"></p>
+<p><img src="/img/hugo/QQ%E5%9B%BE%E7%89%8720200113143929.png" alt="QQ图片20200113143929"></p>
 <p>复制以上命令，即可将主题clone到本地的themes文件夹下（themes下的每一个文件夹都是一个主题）</p>
 <h3 id="5">5.在本地启动站点</h3>
 <pre><code>hugo server -t 已下载的主题名称(如prologue) --buildDrafts
-</code></pre><p>这时候便可以对图中的地址进行访问了<img src="img/hugo/QQ%E5%9B%BE%E7%89%8720200113144905.png" alt="QQ图片20200113144905"></p>
+</code></pre><p>这时候便可以对图中的地址进行访问了<img src="/img/hugo/QQ%E5%9B%BE%E7%89%8720200113144905.png" alt="QQ图片20200113144905"></p>
 <p>但这时候站点是空的，什么都没有</p>
 <h3 id="6">6.写一篇博客</h3>
 <p>回到E:\hugo\myblog&gt;,执行</p>
@@ -140,9 +140,9 @@ hugo new post/myFirstBlog.md 这个命令的意思是在content目录下，创�
 </code></pre><p>访问刚才那个地址，会发现博客中多了一篇文章myFirstBlog</p>
 <h3 id="7github">7.将个人博客部署到github</h3>
 <p>1.打开自己的github，点击新建一个仓库</p>
-<p><img src="img/hugo/QQ%E5%9B%BE%E7%89%8720200113153614.png" alt="QQ图片20200113153614"></p>
+<p><img src="/img/hugo/QQ%E5%9B%BE%E7%89%8720200113153614.png" alt="QQ图片20200113153614"></p>
 <p>2.指定一个仓库名，名字必须为以下格式（蓝色部分和自己账户名相同，下面是红色因为我已经有这个仓库了）</p>
-<p><img src="img/hugo/QQ%E5%9B%BE%E7%89%8720200113153856.png" alt="QQ图片20200113153856"></p>
+<p><img src="/img/hugo/QQ%E5%9B%BE%E7%89%8720200113153856.png" alt="QQ图片20200113153856"></p>
 <p>3.开始部署</p>
 <pre><code>hugo --theme=m10c --baseUrl=&quot;https://hexinliu.github.io/&quot; --buildDrafts
 </code></pre><p>执行以上命令之后，便会在myblog文件夹下生成一个public文件夹，里面存放着你的博客网站的相关信息，接下来就是把这个public文件传到github上</p>

@@ -17,7 +17,12 @@
       <pubDate>Tue, 14 Jan 2020 22:49:29 +0800</pubDate>
       
       <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
-      <description></description>
+      <description>[数据结构]链表&amp;ndash;合并两个有序链表  题目描述 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有结点组成的。
+示例： 输入：1-&amp;gt;1-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4
+输出：1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
+算法(递归解法)： 1.如果两个链表有一个是空链表，那么不需要合并，直接返回非空链表。
+2.否则，比较l1和l2两个链表哪个的头元素更小，选择更小的添加到结果里，如果两个链表都为空，则过程终止。
+题解： class ListNode{ int val; ListNode next; ListNode (int x) { val = x; } } public class mergeTwoLists { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) { return l2; } else if (l2 == null) { return l1; } else if (l1.val &amp;lt; l2.val) { l1.next = mergeTwoLists(l1.next, l2); return l1; } else { l2.</description>
     </item>
     
     <item>

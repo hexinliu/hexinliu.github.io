@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  环形链表 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  环形链表"/>
+<meta name="twitter:description" content="[数据结构]链表&ndash;环形链表  题目描述 给定一个链表，判断链表中是否有环。
+算法1（哈希表）： 遍历所有结点，然后在哈希表中存储每个结点的引用，当检测到空节点null时，说明已经检测到最后一个结点，并且该链表中没有环。若当前结点的引用已存在于哈希表中，说明有环。（检查一个结点此前是否被访问过）
+题解： public class Solution { public boolean hasCycle(ListNode head) { Set&lt;ListNode&gt; set = new HashSet&lt;&gt;(); while(head != null) { if (set.contains(head)) { return true; } else set.add(head); head = head.next; } return false; } } 复杂度：  时间复杂度：O(n)，对于含有n个元素的链表，每个元素最多访问一次，往哈希表中添加一个元素最多花费O(1)时间。 空间复杂度：O(n)，空间取决于添加到哈希表中的元素数目。最多可以添加n个元素。  算法2（双指针）： 使用具有不同速度的快、慢两个指针，快指针每次走两步，慢指针每次走一步。考虑一个环形链表，把快慢指针想象成在环形跑道上跑步的运动员，快跑者一定能追上慢跑者。时间允许的情况下，他们一定会相遇。
+题解： public class Solution { public boolean hasCycle(ListNode head) { if (head == null || head.next == null) return false; ListNode fast = head."/>
+
+    <meta property="og:title" content="[数据结构]链表  环形链表" />
+<meta property="og:description" content="[数据结构]链表&ndash;环形链表  题目描述 给定一个链表，判断链表中是否有环。
+算法1（哈希表）： 遍历所有结点，然后在哈希表中存储每个结点的引用，当检测到空节点null时，说明已经检测到最后一个结点，并且该链表中没有环。若当前结点的引用已存在于哈希表中，说明有环。（检查一个结点此前是否被访问过）
+题解： public class Solution { public boolean hasCycle(ListNode head) { Set&lt;ListNode&gt; set = new HashSet&lt;&gt;(); while(head != null) { if (set.contains(head)) { return true; } else set.add(head); head = head.next; } return false; } } 复杂度：  时间复杂度：O(n)，对于含有n个元素的链表，每个元素最多访问一次，往哈希表中添加一个元素最多花费O(1)时间。 空间复杂度：O(n)，空间取决于添加到哈希表中的元素数目。最多可以添加n个元素。  算法2（双指针）： 使用具有不同速度的快、慢两个指针，快指针每次走两步，慢指针每次走一步。考虑一个环形链表，把快慢指针想象成在环形跑道上跑步的运动员，快跑者一定能追上慢跑者。时间允许的情况下，他们一定会相遇。
+题解： public class Solution { public boolean hasCycle(ListNode head) { if (head == null || head.next == null) return false; ListNode fast = head." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" />
+<meta property="article:published_time" content="2020-01-17T15:34:55+08:00" />
+<meta property="article:modified_time" content="2020-01-17T15:34:55+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  环形链表</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 17, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="--">[数据结构]链表&ndash;环形链表</h3>
+<hr>
+<h3 id="heading">题目描述</h3>
+<p>给定一个链表，判断链表中是否有环。</p>
+<h4 id="1">算法1（哈希表）：</h4>
+<p>遍历所有结点，然后在哈希表中存储每个结点的引用，当检测到空节点null时，说明已经检测到最后一个结点，并且该链表中没有环。若当前结点的引用已存在于哈希表中，说明有环。（检查一个结点此前是否被访问过）</p>
+<h4 id="heading-1">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hasCycle</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Set<span style="color:#f92672">&lt;</span>ListNode<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>head <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>head<span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+            <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span>
+            set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>head<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-2">复杂度：</h4>
+<ul>
+<li>时间复杂度：O(n)，对于含有n个元素的链表，每个元素最多访问一次，往哈希表中添加一个元素最多花费O(1)时间。</li>
+<li>空间复杂度：O(n)，空间取决于添加到哈希表中的元素数目。最多可以添加n个元素。</li>
+</ul>
+<h4 id="2">算法2（双指针）：</h4>
+<p>使用具有不同速度的快、慢两个指针，快指针每次走两步，慢指针每次走一步。考虑一个环形链表，把快慢指针想象成在环形跑道上跑步的运动员，快跑者一定能追上慢跑者。时间允许的情况下，他们一定会相遇。</p>
+<h4 id="heading-3">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hasCycle</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        ListNode fast <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        ListNode slow <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>fast <span style="color:#f92672">!</span><span style="color:#f92672">=</span> slow<span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">else</span>
+            <span style="color:#f92672">{</span>
+                fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+                slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-4">复杂度：</h4>
+<ul>
+<li>
+<p>时间复杂度：O(n)，设n为链表中的结点总数，则分别考虑下面两种情况</p>
+<p>​	① **链表中不存在环 **</p>
+<p>​			快指针首先到达链表尾部，其时间取决于链表长度，即O(n)</p>
+<p>​	② <strong>链表中存在环</strong></p>
+<p>​			将慢指针的移动过程划分为两个阶段：非环部分与环形部分</p>
+<p>​		1.慢指针在走完非环部分后将进入环形部分，此时，快指针已在环中，循环次数=非环部分长度=N</p>
+<p>​		2.两个指针都在环形部分，由于快跑者每次移动两步而慢跑者每次移动一步，故其速度差值为1，因此需要经过  二者之间距离/速度差值   次循环后，快跑者将追上慢跑者。这个距离几乎就是环形长度K，且速度差值为1，故 循环次数 ≈ 环形部分长度K</p>
+<p>​		因此，在最坏情况下，时间复杂度为O(N+K)，即O(n)</p>
+</li>
+<li>
+<p>空间复杂度：O(1)，只使用了快指针和慢指针两个结点。</p>
+</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

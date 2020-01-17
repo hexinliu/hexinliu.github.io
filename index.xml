@@ -6,10 +6,22 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jan 2020 22:56:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2020 15:34:55 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  环形链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 17 Jan 2020 15:34:55 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+      <description>[数据结构]链表&amp;ndash;环形链表  题目描述 给定一个链表，判断链表中是否有环。
+算法1（哈希表）： 遍历所有结点，然后在哈希表中存储每个结点的引用，当检测到空节点null时，说明已经检测到最后一个结点，并且该链表中没有环。若当前结点的引用已存在于哈希表中，说明有环。（检查一个结点此前是否被访问过）
+题解： public class Solution { public boolean hasCycle(ListNode head) { Set&amp;lt;ListNode&amp;gt; set = new HashSet&amp;lt;&amp;gt;(); while(head != null) { if (set.contains(head)) { return true; } else set.add(head); head = head.next; } return false; } } 复杂度：  时间复杂度：O(n)，对于含有n个元素的链表，每个元素最多访问一次，往哈希表中添加一个元素最多花费O(1)时间。 空间复杂度：O(n)，空间取决于添加到哈希表中的元素数目。最多可以添加n个元素。  算法2（双指针）： 使用具有不同速度的快、慢两个指针，快指针每次走两步，慢指针每次走一步。考虑一个环形链表，把快慢指针想象成在环形跑道上跑步的运动员，快跑者一定能追上慢跑者。时间允许的情况下，他们一定会相遇。
+题解： public class Solution { public boolean hasCycle(ListNode head) { if (head == null || head.next == null) return false; ListNode fast = head.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  删除排序链表中的重复元素</title>

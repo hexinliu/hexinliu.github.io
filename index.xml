@@ -6,10 +6,22 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jan 2020 14:11:46 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 22:16:14 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  移除链表元素</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Sun, 19 Jan 2020 22:16:14 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/</guid>
+      <description>[数据结构]链表&amp;ndash;移除链表元素  题目描述 删除链表中等于给定值val的所有值。
+示例： 输入: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 输出: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 算法(哨兵结点)： 初始化一个哨兵结点作为伪头，初始化两个指针分别指向当前结点和当前结点的前驱结点。比较当前结点的值和给定的值，若相等，让前驱结点的next指向当前结点的next；若不相等，让当前结点作为前驱结点。当前结点向后移动，继续判断。
+题解： class Solution { public ListNode removeElements(ListNode head, int val) { ListNode sentinel = new ListNode(-1); sentinel.next = head; ListNode current = head; ListNode pre = sentinel; while (current != null ) { if (current.val == val) pre.next = current.next; else pre = current; current = current.next; } return sentinel.next; } }  这个题目如果要删除的结点是中间结点，会很简单；但如果删除的是位于链表头部的一个或多个结点，会很复杂。这里遇到一个重要的思想：哨兵结点
+​	哨兵节点广泛应用于树和链表中，如伪头、伪尾、标记等，它们是纯功能的，通常不保存任何数据，其主要目的是使链表标准化，如使链表永不为空、永不无头、简化插入和删除。</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  相交链表</title>

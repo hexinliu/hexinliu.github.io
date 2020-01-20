@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jan 2020 22:16:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 20:01:25 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  反转链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 20 Jan 2020 20:01:25 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+      <description>[数据结构]链表&amp;ndash;反转链表  题目描述 反转一个单链表
+示例： 输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL 输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL 算法1(循环)： 遍历链表，将当前结点的next指向当前结点的前一个结点，由于结点定义时没有定义前驱指针，故必须提前保存当前结点的前一个结点，在进行更改之前，还需保存当前结点的下一个结点。
+题解： class Solution { public ListNode reverseList(ListNode head) { ListNode pre = null; ListNode current = head; ListNode next = null; while (current != null) { next = current.next; current.next = pre; pre = current; current = next; } return pre; } } 复杂度：  时间复杂度：假设链表长度为n，则为O(n) 空间复杂度：O(1)   算法2(递归)： 假设链表是[1, 2, 3, 4, 5]从最底层最后一个reverseList(5)来看
+ 返回了5这个节点 reverseList(4)中 p为5 head.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  移除链表元素</title>

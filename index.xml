@@ -6,10 +6,21 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 20:01:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2020 13:06:03 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  回文链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Tue, 21 Jan 2020 13:06:03 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</guid>
+      <description>[数据结构]链表&amp;ndash;回文链表  题目描述 判断一个链表是不是回文链表
+示例1： 输入: 1-&amp;gt;2 输出: false 示例2： 输入: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 输出: true 算法1(复制到数组然后用双指针)： 由于直接用链表操作并不简单，而用数组实现判断回文很会简单，首先考虑到用数组。将链表中的元素复制到数组中，然后利用两个指针，一个从前向后移动，一个从后向前移动，依次判断是否相等。
+题解： class Solution { public boolean isPalindrome(ListNode head) { List&amp;lt;Integer&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); while(head != null) { list.add(head.val); head = head.next; } int first = 0; int last = list.size()-1; while (first &amp;lt; last) { if (! list.get(first).equals(list.get(last))) return false; first++; last--; } return true; } } 复杂度：  时间复杂度：O(n)，复制到数组O(n)，双指针移动O(n)，共O(2n)，即O(n)。 空间复杂度：O(n) ,用了一个数组存放n个链表元素。   算法2(快慢指针)： 由于需要比较前后两段的结点中的值是否相同，故先要将想办法将链表分成前后两段。可以使用快慢两个指针，慢指针每次走一步，快指针每次走两步，则当快指针走到链表结尾时，慢指针刚好走到链表中部。然后将其中一部分反转与另一部分比较。</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  反转链表</title>

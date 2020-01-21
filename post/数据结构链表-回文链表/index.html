@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  回文链表 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  回文链表"/>
+<meta name="twitter:description" content="[数据结构]链表&ndash;回文链表  题目描述 判断一个链表是不是回文链表
+示例1： 输入: 1-&gt;2 输出: false 示例2： 输入: 1-&gt;2-&gt;2-&gt;1 输出: true 算法1(复制到数组然后用双指针)： 由于直接用链表操作并不简单，而用数组实现判断回文很会简单，首先考虑到用数组。将链表中的元素复制到数组中，然后利用两个指针，一个从前向后移动，一个从后向前移动，依次判断是否相等。
+题解： class Solution { public boolean isPalindrome(ListNode head) { List&lt;Integer&gt; list = new ArrayList&lt;&gt;(); while(head != null) { list.add(head.val); head = head.next; } int first = 0; int last = list.size()-1; while (first &lt; last) { if (! list.get(first).equals(list.get(last))) return false; first&#43;&#43;; last--; } return true; } } 复杂度：  时间复杂度：O(n)，复制到数组O(n)，双指针移动O(n)，共O(2n)，即O(n)。 空间复杂度：O(n) ,用了一个数组存放n个链表元素。   算法2(快慢指针)： 由于需要比较前后两段的结点中的值是否相同，故先要将想办法将链表分成前后两段。可以使用快慢两个指针，慢指针每次走一步，快指针每次走两步，则当快指针走到链表结尾时，慢指针刚好走到链表中部。然后将其中一部分反转与另一部分比较。"/>
+
+    <meta property="og:title" content="[数据结构]链表  回文链表" />
+<meta property="og:description" content="[数据结构]链表&ndash;回文链表  题目描述 判断一个链表是不是回文链表
+示例1： 输入: 1-&gt;2 输出: false 示例2： 输入: 1-&gt;2-&gt;2-&gt;1 输出: true 算法1(复制到数组然后用双指针)： 由于直接用链表操作并不简单，而用数组实现判断回文很会简单，首先考虑到用数组。将链表中的元素复制到数组中，然后利用两个指针，一个从前向后移动，一个从后向前移动，依次判断是否相等。
+题解： class Solution { public boolean isPalindrome(ListNode head) { List&lt;Integer&gt; list = new ArrayList&lt;&gt;(); while(head != null) { list.add(head.val); head = head.next; } int first = 0; int last = list.size()-1; while (first &lt; last) { if (! list.get(first).equals(list.get(last))) return false; first&#43;&#43;; last--; } return true; } } 复杂度：  时间复杂度：O(n)，复制到数组O(n)，双指针移动O(n)，共O(2n)，即O(n)。 空间复杂度：O(n) ,用了一个数组存放n个链表元素。   算法2(快慢指针)： 由于需要比较前后两段的结点中的值是否相同，故先要将想办法将链表分成前后两段。可以使用快慢两个指针，慢指针每次走一步，快指针每次走两步，则当快指针走到链表结尾时，慢指针刚好走到链表中部。然后将其中一部分反转与另一部分比较。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/" />
+<meta property="article:published_time" content="2020-01-21T13:06:03+08:00" />
+<meta property="article:modified_time" content="2020-01-21T13:06:03+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  回文链表</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 21, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="--">[数据结构]链表&ndash;回文链表</h3>
+<hr>
+<h3 id="heading">题目描述</h3>
+<p>判断一个链表是不是回文链表</p>
+<h6 id="1">示例1：</h6>
+<pre><code>输入: 1-&gt;2
+输出: false
+</code></pre><h6 id="2">示例2：</h6>
+<pre><code>输入: 1-&gt;2-&gt;2-&gt;1
+输出: true
+</code></pre><h4 id="1-1">算法1(复制到数组然后用双指针)：</h4>
+<p>由于直接用链表操作并不简单，而用数组实现判断回文很会简单，首先考虑到用数组。将链表中的元素复制到数组中，然后利用两个指针，一个从前向后移动，一个从后向前移动，依次判断是否相等。</p>
+<h4 id="heading-1">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPalindrome</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>head <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">int</span> first <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> last <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>first <span style="color:#f92672">&lt;</span> last<span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>first<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>last<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+            first<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
+            last<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-2">复杂度：</h4>
+<ul>
+<li>时间复杂度：O(n)，复制到数组O(n)，双指针移动O(n)，共O(2n)，即O(n)。</li>
+<li>空间复杂度：O(n) ,用了一个数组存放n个链表元素。</li>
+</ul>
+<hr>
+<h4 id="2-1">算法2(快慢指针)：</h4>
+<p>由于需要比较前后两段的结点中的值是否相同，故先要将想办法将链表分成前后两段。可以使用快慢两个指针，慢指针每次走一步，快指针每次走两步，则当快指针走到链表结尾时，慢指针刚好走到链表中部。然后将其中一部分反转与另一部分比较。</p>
+<h4 id="heading-3">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPalindrome</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        ListNode slow <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        ListNode fast <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        ListNode xin <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        ListNode pre <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//反转前半段
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            xin <span style="color:#f92672">=</span> slow<span style="color:#f92672">;</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            xin<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> pre<span style="color:#f92672">;</span>
+            pre <span style="color:#f92672">=</span> xin<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">//如果有奇数个结点，则还需让slow再往前走一步,让后半段不包含中间的结点
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//比较反转的前半段和后半段是否相同
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>xin <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> slow <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>xin<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+            xin <span style="color:#f92672">=</span> xin<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-4">复杂度：</h4>
+<ul>
+<li>时间复杂度：假设链表长度为n，则为O(n)</li>
+<li>空间复杂度：O(1)，由于是一个接一个改变指针，故在堆栈上的堆栈帧不超过O(1)</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

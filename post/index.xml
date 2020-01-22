@@ -6,10 +6,24 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jan 2020 13:06:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 14:16:23 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  删除链表中的一个结点</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Wed, 22 Jan 2020 14:16:23 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/</guid>
+      <description>[数据结构]链表&amp;ndash;删除链表中的一个结点  题目描述 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
+现有一个链表 &amp;ndash; head = [4,5,1,9]，它可以表示为:
+示例1： 输入: head = [4,5,1,9], node = 5 输出: [4,1,9] 解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&amp;gt; 1 -&amp;gt; 9. 要求：
+ 链表至少包含两个结点 链表中所有结点的值都是唯一的 给定的结点不是末尾结点并且一定是链表中的一个有效结点 不从函数中返回任何结果  算法： (这道题最初做的时候总想着让给定结点的前一个结点直接指向后一个结点，但由于该函数的参数并没有给定链表，所以无法获取给定结点的前一个结点，后来想到给链表局部反转再直接指向下一个，但还是需要前一个结点)
+所以只能依次用所给结点后面的值代替前面的值，完成删除给定结点。
+题解1： class Solution { public void deleteNode(ListNode node) { ListNode pre = null; while (node.next != null) { node.val = node.next.val; pre = node; node = node.next; } pre.next = null; } }  答案确实更简洁，确实没想到 ，记录一下。</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  回文链表</title>

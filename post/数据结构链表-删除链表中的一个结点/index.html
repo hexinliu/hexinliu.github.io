@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  删除链表中的一个结点 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  删除链表中的一个结点"/>
+<meta name="twitter:description" content="[数据结构]链表&ndash;删除链表中的一个结点  题目描述 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
+现有一个链表 &ndash; head = [4,5,1,9]，它可以表示为:
+示例1： 输入: head = [4,5,1,9], node = 5 输出: [4,1,9] 解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9. 要求：
+ 链表至少包含两个结点 链表中所有结点的值都是唯一的 给定的结点不是末尾结点并且一定是链表中的一个有效结点 不从函数中返回任何结果  算法： (这道题最初做的时候总想着让给定结点的前一个结点直接指向后一个结点，但由于该函数的参数并没有给定链表，所以无法获取给定结点的前一个结点，后来想到给链表局部反转再直接指向下一个，但还是需要前一个结点)
+所以只能依次用所给结点后面的值代替前面的值，完成删除给定结点。
+题解1： class Solution { public void deleteNode(ListNode node) { ListNode pre = null; while (node.next != null) { node.val = node.next.val; pre = node; node = node.next; } pre.next = null; } }  答案确实更简洁，确实没想到 ，记录一下。"/>
+
+    <meta property="og:title" content="[数据结构]链表  删除链表中的一个结点" />
+<meta property="og:description" content="[数据结构]链表&ndash;删除链表中的一个结点  题目描述 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
+现有一个链表 &ndash; head = [4,5,1,9]，它可以表示为:
+示例1： 输入: head = [4,5,1,9], node = 5 输出: [4,1,9] 解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9. 要求：
+ 链表至少包含两个结点 链表中所有结点的值都是唯一的 给定的结点不是末尾结点并且一定是链表中的一个有效结点 不从函数中返回任何结果  算法： (这道题最初做的时候总想着让给定结点的前一个结点直接指向后一个结点，但由于该函数的参数并没有给定链表，所以无法获取给定结点的前一个结点，后来想到给链表局部反转再直接指向下一个，但还是需要前一个结点)
+所以只能依次用所给结点后面的值代替前面的值，完成删除给定结点。
+题解1： class Solution { public void deleteNode(ListNode node) { ListNode pre = null; while (node.next != null) { node.val = node.next.val; pre = node; node = node.next; } pre.next = null; } }  答案确实更简洁，确实没想到 ，记录一下。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/" />
+<meta property="article:published_time" content="2020-01-22T14:16:23+08:00" />
+<meta property="article:modified_time" content="2020-01-22T14:16:23+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  删除链表中的一个结点</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 22, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="--">[数据结构]链表&ndash;删除链表中的一个结点</h3>
+<hr>
+<h3 id="heading">题目描述</h3>
+<p>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。</p>
+<p>现有一个链表 &ndash; head = [4,5,1,9]，它可以表示为:</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/01/19/237_example.png" alt="img"></p>
+<h6 id="1">示例1：</h6>
+<pre><code>输入: head = [4,5,1,9], node = 5
+输出: [4,1,9]
+解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.
+</code></pre><p>要求：</p>
+<ul>
+<li>链表至少包含两个结点</li>
+<li>链表中所有结点的值都是唯一的</li>
+<li>给定的结点不是末尾结点并且一定是链表中的一个有效结点</li>
+<li>不从函数中返回任何结果</li>
+</ul>
+<h4 id="heading-1">算法：</h4>
+<p>(这道题最初做的时候总想着让给定结点的前一个结点直接指向后一个结点，但由于该函数的参数并没有给定链表，所以无法获取给定结点的前一个结点，后来想到给链表局部反转再直接指向下一个，但还是需要前一个结点)</p>
+<p>所以只能依次用所给结点后面的值代替前面的值，完成删除给定结点。</p>
+<h4 id="1-1">题解1：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteNode</span><span style="color:#f92672">(</span>ListNode node<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        ListNode pre <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">;</span>
+            pre <span style="color:#f92672">=</span> node<span style="color:#f92672">;</span>
+            node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        pre<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<p>答案确实更简洁，确实没想到 ，记录一下。</p>
+<h4 id="2">题解2：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+ <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteNode</span><span style="color:#f92672">(</span>ListNode node<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">;</span>
+    node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-2">复杂度：</h4>
+<ul>
+<li>时间复杂度：O(1)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

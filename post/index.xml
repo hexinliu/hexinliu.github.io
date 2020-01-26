@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jan 2020 16:22:02 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 18:49:20 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  两两交换链表中的结点</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Sun, 26 Jan 2020 18:49:20 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%BB%93%E7%82%B9/</guid>
+      <description>题目描述 给定一个链表，两两交换其中相邻的结点，并返回交换后的链表。不能只是单纯的改变结点内部的值，需要实际的进行结点交换。
+示例： 给定 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 你应该返回 2-&amp;gt;1-&amp;gt;4-&amp;gt;3. 算法1： 题解： class Solution { public ListNode swapPairs(ListNode head) { ListNode pre = new ListNode(0); pre.next = head; ListNode temp = pre; while(temp.next != null &amp;amp;&amp;amp; temp.next.next != null) { ListNode start = temp.next; ListNode end = temp.next.next; temp.next = end; start.next = end.next; end.next = start; temp = start; } return pre.next; } } 复杂度：  时间复杂度：O(n)，假设链表长度为n。 空间复杂度：O(1)。   做这个题的过程中参考答案时发现了还有递归解法，还不理解这个过程，先记录下来。
+这个题目中作者给了一些关于递归的解题思路，觉得挺不错，记录下来：递归写法要观察本级递归的解决过程，形成抽象模型，而不是去思考一级又一级完整的调用栈，而无从下手。递归需要注意三个方面：1.返回值 2.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  删除链表的倒数第N个结点</title>

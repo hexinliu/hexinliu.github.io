@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2020 22:01:01 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 22:39:50 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  删除排序链表中的重复元素2</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/</link>
+      <pubDate>Tue, 28 Jan 2020 22:39:50 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/</guid>
+      <description>题目描述 给定一个排序链表，删除所有含有重复数字的结点，只保留原始链表中没有重复出现的数字。
+示例1： 输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 输出: 1-&amp;gt;2-&amp;gt;5 示例2： 输入: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 输出: 2-&amp;gt;3 算法： 一般思路，从链表头部开始判断，如果出现两个及以上连续的值，将值记录下来，继续向后判断直至出现一个不同的值，将前一部分的next直接指向新的值，在从新的值继续向后判断；为了避免开头就出现连续的值，需要设置一个伪头(哨兵结点)。
+题解： class Solution { public ListNode deleteDuplicates(ListNode head) { ListNode sentinel = new ListNode(0); sentinel.next = head; ListNode cur = sentinel; ListNode pre; while (cur != null) { pre = cur; cur = cur.next; while (cur != null &amp;amp;&amp;amp; cur.next != null &amp;amp;&amp;amp; cur.val == cur.next.val) { int flag = cur.val; while (cur != null &amp;amp;&amp;amp; cur.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  旋转链表</title>

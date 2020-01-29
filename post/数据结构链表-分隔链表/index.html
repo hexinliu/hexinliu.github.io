@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  分隔链表 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  分隔链表"/>
+<meta name="twitter:description" content="题目描述 给定一个链表和一个特定值x，对链表进行分隔，使得所有小于x的结点都在大于或等于x的结点之前。(保留两个分区中每个结点的初始相对位置)
+示例： 输入: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3 输出: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5 算法： 本题要求修改链表结构，使得小于x的元素位于值大于等于x的元素之前，这意味着在改变后的链表中存在某个点，这个点之前的元素小于x，之后的元素大于x。按照这个规律，可以按顺序遍历原链表并将其拆分，小于x的放入一个链表，大于x的放入另一个链表，最后将两个链表拼接。
+方法：双指针法。初始化两个指针before和after，将其都初始化为哑结点(可以减少条件判断)。遍历原链表，若值小于x，将其连到before后面，大于等于x，将其连到after后面。最后将链表拼接，并返回拼接后链表的头结点。
+题解： class Solution { public ListNode partition(ListNode head, int x) { //初始化两个哑结点  ListNode before_head = new ListNode(0); ListNode before = before_head; ListNode after_head = new ListNode(0); ListNode after = after_head; //遍历给定链表，根据值的大小将其分别链到不同的链表后面  while (head != null) { if (head.val &lt; x) { before.next = head; before = before.next; } else { after.next = head; after = after."/>
+
+    <meta property="og:title" content="[数据结构]链表  分隔链表" />
+<meta property="og:description" content="题目描述 给定一个链表和一个特定值x，对链表进行分隔，使得所有小于x的结点都在大于或等于x的结点之前。(保留两个分区中每个结点的初始相对位置)
+示例： 输入: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3 输出: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5 算法： 本题要求修改链表结构，使得小于x的元素位于值大于等于x的元素之前，这意味着在改变后的链表中存在某个点，这个点之前的元素小于x，之后的元素大于x。按照这个规律，可以按顺序遍历原链表并将其拆分，小于x的放入一个链表，大于x的放入另一个链表，最后将两个链表拼接。
+方法：双指针法。初始化两个指针before和after，将其都初始化为哑结点(可以减少条件判断)。遍历原链表，若值小于x，将其连到before后面，大于等于x，将其连到after后面。最后将链表拼接，并返回拼接后链表的头结点。
+题解： class Solution { public ListNode partition(ListNode head, int x) { //初始化两个哑结点  ListNode before_head = new ListNode(0); ListNode before = before_head; ListNode after_head = new ListNode(0); ListNode after = after_head; //遍历给定链表，根据值的大小将其分别链到不同的链表后面  while (head != null) { if (head.val &lt; x) { before.next = head; before = before.next; } else { after.next = head; after = after." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/" />
+<meta property="article:published_time" content="2020-01-29T19:16:32+08:00" />
+<meta property="article:modified_time" content="2020-01-29T19:16:32+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  分隔链表</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 29, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="heading">题目描述</h3>
+<p>给定一个链表和一个特定值x，对链表进行分隔，使得所有小于x的结点都在大于或等于x的结点之前。(保留两个分区中每个结点的初始相对位置)</p>
+<h6 id="heading-1">示例：</h6>
+<pre><code>输入: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3
+输出: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
+</code></pre><h4 id="heading-2">算法：</h4>
+<p>本题要求修改链表结构，使得小于x的元素位于值大于等于x的元素之前，这意味着在改变后的链表中存在某个点，这个点之前的元素小于x，之后的元素大于x。按照这个规律，可以按顺序遍历原链表并将其拆分，小于x的放入一个链表，大于x的放入另一个链表，最后将两个链表拼接。</p>
+<p>方法：双指针法。初始化两个指针before和after，将其都初始化为哑结点(可以减少条件判断)。遍历原链表，若值小于x，将其连到before后面，大于等于x，将其连到after后面。最后将链表拼接，并返回拼接后链表的头结点。</p>
+<h4 id="heading-3">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">partition</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//初始化两个哑结点
+</span><span style="color:#75715e"></span>        ListNode before_head <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        ListNode before <span style="color:#f92672">=</span> before_head<span style="color:#f92672">;</span>
+        ListNode after_head <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        ListNode after <span style="color:#f92672">=</span> after_head<span style="color:#f92672">;</span>
+		<span style="color:#75715e">//遍历给定链表，根据值的大小将其分别链到不同的链表后面
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">&lt;</span> x<span style="color:#f92672">)</span>
+            <span style="color:#f92672">{</span>
+                before<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+                before <span style="color:#f92672">=</span> before<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span> 
+            <span style="color:#f92672">{</span>
+                after<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+                after <span style="color:#f92672">=</span> after<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">//after链最后要指向null
+</span><span style="color:#75715e"></span>         after<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+		<span style="color:#75715e">//连接两个链表
+</span><span style="color:#75715e"></span>         before<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> after_head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//返回头结点 
+</span><span style="color:#75715e"></span>         <span style="color:#66d9ef">return</span> before_head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-4">复杂度：</h4>
+<ul>
+<li>时间复杂度：假设链表长度为n，则为O(n)</li>
+<li>空间复杂度：O(1)。没有申请新的空间，只是移动了原有的结点。</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

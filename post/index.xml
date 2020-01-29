@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2020 22:39:50 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 19:16:32 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  分隔链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Wed, 29 Jan 2020 19:16:32 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目描述 给定一个链表和一个特定值x，对链表进行分隔，使得所有小于x的结点都在大于或等于x的结点之前。(保留两个分区中每个结点的初始相对位置)
+示例： 输入: head = 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;2, x = 3 输出: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5 算法： 本题要求修改链表结构，使得小于x的元素位于值大于等于x的元素之前，这意味着在改变后的链表中存在某个点，这个点之前的元素小于x，之后的元素大于x。按照这个规律，可以按顺序遍历原链表并将其拆分，小于x的放入一个链表，大于x的放入另一个链表，最后将两个链表拼接。
+方法：双指针法。初始化两个指针before和after，将其都初始化为哑结点(可以减少条件判断)。遍历原链表，若值小于x，将其连到before后面，大于等于x，将其连到after后面。最后将链表拼接，并返回拼接后链表的头结点。
+题解： class Solution { public ListNode partition(ListNode head, int x) { //初始化两个哑结点  ListNode before_head = new ListNode(0); ListNode before = before_head; ListNode after_head = new ListNode(0); ListNode after = after_head; //遍历给定链表，根据值的大小将其分别链到不同的链表后面  while (head != null) { if (head.val &amp;lt; x) { before.next = head; before = before.next; } else { after.next = head; after = after.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  删除排序链表中的重复元素2</title>

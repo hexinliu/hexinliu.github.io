@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  反转链表2 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  反转链表2"/>
+<meta name="twitter:description" content="[数据结构]链表&ndash;反转链表2  题目描述 反转从位置m到n的链表，使用一趟扫描完成。(1≤m≤n≤链表长度)
+示例： 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 输出: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL 算法1(循环)： 遍历链表，将当前结点的next指向当前结点的前一个结点，由于结点定义时没有定义前驱指针，故必须提前保存当前结点的前一个结点，在进行更改之前，还需保存当前结点的下一个结点。
+题解： class Solution { // Object level variables since we need the changes  // to persist across recursive calls and Java is pass by value.  private boolean stop; private ListNode left; public void recurseAndReverse(ListNode right, int m, int n) { // base case. Don&#39;t proceed any further  if (n == 1) { return; } // Keep moving the right pointer one step forward until (n == 1)  right = right."/>
+
+    <meta property="og:title" content="[数据结构]链表  反转链表2" />
+<meta property="og:description" content="[数据结构]链表&ndash;反转链表2  题目描述 反转从位置m到n的链表，使用一趟扫描完成。(1≤m≤n≤链表长度)
+示例： 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 输出: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL 算法1(循环)： 遍历链表，将当前结点的next指向当前结点的前一个结点，由于结点定义时没有定义前驱指针，故必须提前保存当前结点的前一个结点，在进行更改之前，还需保存当前结点的下一个结点。
+题解： class Solution { // Object level variables since we need the changes  // to persist across recursive calls and Java is pass by value.  private boolean stop; private ListNode left; public void recurseAndReverse(ListNode right, int m, int n) { // base case. Don&#39;t proceed any further  if (n == 1) { return; } // Keep moving the right pointer one step forward until (n == 1)  right = right." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A82/" />
+<meta property="article:published_time" content="2020-01-30T16:04:16+08:00" />
+<meta property="article:modified_time" content="2020-01-30T16:04:16+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  反转链表2</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 30, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="--2">[数据结构]链表&ndash;反转链表2</h3>
+<hr>
+<h3 id="heading">题目描述</h3>
+<p>反转从位置m到n的链表，使用一趟扫描完成。(1≤m≤n≤链表长度)</p>
+<h6 id="heading-1">示例：</h6>
+<pre><code>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
+输出: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL
+</code></pre><h4 id="1">算法1(循环)：</h4>
+<p>遍历链表，将当前结点的next指向当前结点的前一个结点，由于结点定义时没有定义前驱指针，故必须提前保存当前结点的前一个结点，在进行更改之前，还需保存当前结点的下一个结点。</p>
+<h4 id="heading-2">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">// Object level variables since we need the changes
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// to persist across recursive calls and Java is pass by value.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> stop<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> ListNode left<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">recurseAndReverse</span><span style="color:#f92672">(</span>ListNode right<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> m<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+        <span style="color:#75715e">// base case. Don&#39;t proceed any further
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">// Keep moving the right pointer one step forward until (n == 1)
+</span><span style="color:#75715e"></span>        right <span style="color:#f92672">=</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+
+        <span style="color:#75715e">// Keep moving left pointer to the right until we reach the proper node
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// from where the reversal is to start.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>m <span style="color:#f92672">&gt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">// Recurse with m and n reduced.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">recurseAndReverse</span><span style="color:#f92672">(</span>right<span style="color:#f92672">,</span> m <span style="color:#f92672">-</span> 1<span style="color:#f92672">,</span> n <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        <span style="color:#75715e">// In case both the pointers cross each other or become equal, we
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// stop i.e. don&#39;t swap data any further. We are done reversing at this
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// point.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> right <span style="color:#f92672">|</span><span style="color:#f92672">|</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>            
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">// Until the boolean stop is false, swap data between the two pointers
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stop</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">;</span>
+            right<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+
+            <span style="color:#75715e">// Move left one step to the right.
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// The right pointer moves one step back via backtracking.
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">reverseBetween</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> m<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">recurseAndReverse</span><span style="color:#f92672">(</span>head<span style="color:#f92672">,</span> m<span style="color:#f92672">,</span> n<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> head<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-3">复杂度：</h4>
+<ul>
+<li>时间复杂度：O(n) ，每个结点最多处理两次</li>
+<li>空间复杂度：O(n)，最坏的情况下，需要反转整个链表，这是此时递归栈的大小。</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

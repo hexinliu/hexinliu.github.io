@@ -6,10 +6,21 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jan 2020 19:16:32 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 16:04:16 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  反转链表2</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A82/</link>
+      <pubDate>Thu, 30 Jan 2020 16:04:16 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A82/</guid>
+      <description>[数据结构]链表&amp;ndash;反转链表2  题目描述 反转从位置m到n的链表，使用一趟扫描完成。(1≤m≤n≤链表长度)
+示例： 输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 输出: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL 算法1(循环)： 遍历链表，将当前结点的next指向当前结点的前一个结点，由于结点定义时没有定义前驱指针，故必须提前保存当前结点的前一个结点，在进行更改之前，还需保存当前结点的下一个结点。
+题解： class Solution { // Object level variables since we need the changes  // to persist across recursive calls and Java is pass by value.  private boolean stop; private ListNode left; public void recurseAndReverse(ListNode right, int m, int n) { // base case. Don&amp;#39;t proceed any further  if (n == 1) { return; } // Keep moving the right pointer one step forward until (n == 1)  right = right.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  分隔链表</title>

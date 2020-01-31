@@ -6,10 +6,21 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jan 2020 16:04:16 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jan 2020 12:31:13 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  有序链表转换二叉搜索树</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</link>
+      <pubDate>Fri, 31 Jan 2020 12:31:13 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</guid>
+      <description>题目描述 给定一个单链表，其中的元素按升序排列，将其转换为高度平衡的二叉搜索树。
+示例： 给定的有序链表： [-10, -3, 0, 5, 9], 一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树： 0 / \ -3 9 / / -10 5 算法： 由于给定链表中的元素是升序排列的，所以需要将中间元素作为二叉搜索树的根(可以使用快慢指针找到中间元素)，中间元素左侧的所有元素去构造左子树，右侧所有元素去构造右子树，这将保证最后构造出来的二叉树是平衡的。
+题解： class Solution { private ListNode findMiddleElement(ListNode head) { ListNode pre_str = null; ListNode slow_str = head; ListNode fast_str = head; //找到中间结点  while (fast_str != null &amp;amp;&amp;amp; fast_str.next != null) { pre_str = slow_str; slow_str = slow_str.next; fast_str = fast_str.next.next; } //从中间结点之前断开  if (pre_str !</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  反转链表2</title>

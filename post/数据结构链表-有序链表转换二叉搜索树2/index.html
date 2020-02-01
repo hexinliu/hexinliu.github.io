@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  有序链表转换二叉搜索树2 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  有序链表转换二叉搜索树2"/>
+<meta name="twitter:description" content="题目描述 给定一个单链表，其中的元素按升序排列，将其转换为高度平衡的二叉搜索树。
+示例： 给定的有序链表： [-10, -3, 0, 5, 9], 一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树： 0 / \ -3 9 / / -10 5 算法： 上次用的是递归方法，这次用递归&#43;数组的方法。首先将给定的链表转为数组，用left和right分别表示数组的头和尾，则数组的中间元素为(left&#43;right)/2，时间开销为O(1)，同理，将中间元素作为二叉搜索树的根，递归的构造二叉搜索树的两颗子树，分别为(left，mid)，(mid&#43;1，right)。空间换时间的经典案例
+题解： class Solution { private List&lt;Integer&gt; list = new ArrayList&lt;&gt;(); //将链表转换为数组  private void listToArray(ListNode head) { while (head != null) { this.list.add(head.val); head = head.next; } } //得到中间结点并递归的构造左右子树  private TreeNode listToBST(int left, int right) { if (left &gt; right) return null; int mid = (left &#43; right)/2; TreeNode node = new TreeNode(this."/>
+
+    <meta property="og:title" content="[数据结构]链表  有序链表转换二叉搜索树2" />
+<meta property="og:description" content="题目描述 给定一个单链表，其中的元素按升序排列，将其转换为高度平衡的二叉搜索树。
+示例： 给定的有序链表： [-10, -3, 0, 5, 9], 一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树： 0 / \ -3 9 / / -10 5 算法： 上次用的是递归方法，这次用递归&#43;数组的方法。首先将给定的链表转为数组，用left和right分别表示数组的头和尾，则数组的中间元素为(left&#43;right)/2，时间开销为O(1)，同理，将中间元素作为二叉搜索树的根，递归的构造二叉搜索树的两颗子树，分别为(left，mid)，(mid&#43;1，right)。空间换时间的经典案例
+题解： class Solution { private List&lt;Integer&gt; list = new ArrayList&lt;&gt;(); //将链表转换为数组  private void listToArray(ListNode head) { while (head != null) { this.list.add(head.val); head = head.next; } } //得到中间结点并递归的构造左右子树  private TreeNode listToBST(int left, int right) { if (left &gt; right) return null; int mid = (left &#43; right)/2; TreeNode node = new TreeNode(this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912/" />
+<meta property="article:published_time" content="2020-02-01T13:10:34+08:00" />
+<meta property="article:modified_time" content="2020-02-01T13:10:34+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  有序链表转换二叉搜索树2</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 1, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="heading">题目描述</h3>
+<p>给定一个单链表，其中的元素按升序排列，将其转换为高度平衡的二叉搜索树。</p>
+<h6 id="heading-1">示例：</h6>
+<pre><code>给定的有序链表： [-10, -3, 0, 5, 9],
+
+一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树：
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+</code></pre><h4 id="heading-2">算法：</h4>
+<p>上次用的是递归方法，这次用递归+数组的方法。首先将给定的链表转为数组，用left和right分别表示数组的头和尾，则数组的中间元素为(left+right)/2，时间开销为O(1)，同理，将中间元素作为二叉搜索树的根，递归的构造二叉搜索树的两颗子树，分别为(left，mid)，(mid+1，right)。<strong>空间换时间的经典案例</strong></p>
+<p><img src="/img/hugo/QQ%E5%9B%BE%E7%89%8720200131160104.jpg" alt="QQ图片20200131160104"></p>
+<h4 id="heading-3">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+	<span style="color:#75715e">//将链表转换为数组
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">listToArray</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">list</span><span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+	<span style="color:#75715e">//得到中间结点并递归的构造左右子树
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">listToBST</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> left<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> right<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">&gt;</span> right<span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">+</span> right<span style="color:#f92672">)</span><span style="color:#f92672">/</span>2<span style="color:#f92672">;</span>
+
+        TreeNode node <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">list</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>mid<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">=</span><span style="color:#f92672">=</span> right<span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> node<span style="color:#f92672">;</span>
+        node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> listToBST<span style="color:#f92672">(</span>left<span style="color:#f92672">,</span>mid<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> listToBST<span style="color:#f92672">(</span>mid<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span>right<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> node<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">sortedListToBST</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">listToArray</span><span style="color:#f92672">(</span>head<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">listToBST</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">list</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">-</span>1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-4">复杂度：</h4>
+<ul>
+<li>
+<p>时间复杂度：O(n)</p>
+<p>假设链表包含N个元素，每次取中间元素的开销为O(1)，故整体的时间复杂度降低。</p>
+</li>
+<li>
+<p>空间复杂度：O(n)，使用了一个数组。</p>
+</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2020 13:10:34 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2020 15:43:30 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  复制带随机指针的链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Sun, 02 Feb 2020 15:43:30 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目描述 给定一个链表，每个结点包含一个额外增加的随机指针，该指针可以指向链表中的任何结点或空节点。
+要求返回这个链表的深拷贝
+现在用一个由n个结点组成的链表来表示输入/输出中的链表。每个结点用一个[val，random_index]表示：
+ val：一个表示node.val的整数。 random_index：随机指针指向的结点索引(范围从0到n-1)；如果不指向任何结点，则为null。  示例1： 输入：head = [[7,null],[13,0],[11,4],[10,2],[1,0]] 输出：[[7,null],[13,0],[11,4],[10,2],[1,0]] 示例2： 输入：head = [[1,1],[2,1]] 输出：[[1,1],[2,1]] 示例3： 输入：head = [] 输出：[] 解释：给定的链表为空（空指针），因此返回 null。 算法： 题解： class Solution { public Node copyRandomList(Node head) { if (head == null) return null; Node ptr = head; //在原链表每个结点后面创建一个新结点(新结点的val和原结点相同)  while (ptr != null) { Node newnode = new Node(ptr.val); //若原链表为A-&amp;gt;B-&amp;gt;C-&amp;gt;null  //则新链表为A-&amp;gt;A&amp;#39;-&amp;gt;B-&amp;gt;B&amp;#39;-&amp;gt;C-&amp;gt;C&amp;#39;-&amp;gt;null  newnode.next = ptr.next; ptr.next = newnode; ptr = newnode.next; } ptr = head; //为链表中新结点的random指针赋值，让其指向对应的新结点（对应关系等同于源结点中的关系）  while (ptr !</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  有序链表转换二叉搜索树2</title>

@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2020 15:43:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 13:32:54 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  环形链表2</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A82/</link>
+      <pubDate>Mon, 03 Feb 2020 13:32:54 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A82/</guid>
+      <description>[数据结构]链表&amp;ndash;环形链表2  题目描述 给定一个链表，返回链表开始入环的第一个结点。如果链表无环，则返回null。
+为了表示给定链表中的环，这里使用pos来表示链表尾连接到链表中的位置(索引从0开始)。如果pos是-1，则在该链中没有环。(不能修改给定的链表)
+示例1： 输入：head = [3,2,0,-4], pos = 1 输出：tail connects to node index 1 解释：链表中有一个环，其尾部连接到第二个节点。 示例2： 输入：head = [1,2], pos = 0 输出：tail connects to node index 0 解释：链表中有一个环，其尾部连接到第一个节点。 示例3： 输入：head = [1], pos = -1 输出：no cycle 解释：链表中没有环。 算法（双指针）： 快指针每次走两步，慢指针每次走一步，因此快指针走过的路程f一定是慢指针走过路程s的两倍，即f = 2s;假设从链表头到环入口的距离为a，环长度为b，则当快慢指针第一次相遇时，快指针一定比慢指针多走了n个环的长度，即f - s = nb；由这两个式子可以得到第一次相遇时慢指针走了nb的距离。易得环入口一定是a+nb，因此再让慢指针走a步，一定是环入口的位置。
+题解： public class Solution { public ListNode detectCycle(ListNode head) { if (head == null || head.next == null) return null; ListNode fast = head; ListNode slow = head; while (true) { if (fast == null || fast.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  复制带随机指针的链表</title>

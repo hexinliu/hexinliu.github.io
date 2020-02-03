@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[数据结构]链表  环形链表2 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[数据结构]链表  环形链表2"/>
+<meta name="twitter:description" content="[数据结构]链表&ndash;环形链表2  题目描述 给定一个链表，返回链表开始入环的第一个结点。如果链表无环，则返回null。
+为了表示给定链表中的环，这里使用pos来表示链表尾连接到链表中的位置(索引从0开始)。如果pos是-1，则在该链中没有环。(不能修改给定的链表)
+示例1： 输入：head = [3,2,0,-4], pos = 1 输出：tail connects to node index 1 解释：链表中有一个环，其尾部连接到第二个节点。 示例2： 输入：head = [1,2], pos = 0 输出：tail connects to node index 0 解释：链表中有一个环，其尾部连接到第一个节点。 示例3： 输入：head = [1], pos = -1 输出：no cycle 解释：链表中没有环。 算法（双指针）： 快指针每次走两步，慢指针每次走一步，因此快指针走过的路程f一定是慢指针走过路程s的两倍，即f = 2s;假设从链表头到环入口的距离为a，环长度为b，则当快慢指针第一次相遇时，快指针一定比慢指针多走了n个环的长度，即f - s = nb；由这两个式子可以得到第一次相遇时慢指针走了nb的距离。易得环入口一定是a&#43;nb，因此再让慢指针走a步，一定是环入口的位置。
+题解： public class Solution { public ListNode detectCycle(ListNode head) { if (head == null || head.next == null) return null; ListNode fast = head; ListNode slow = head; while (true) { if (fast == null || fast."/>
+
+    <meta property="og:title" content="[数据结构]链表  环形链表2" />
+<meta property="og:description" content="[数据结构]链表&ndash;环形链表2  题目描述 给定一个链表，返回链表开始入环的第一个结点。如果链表无环，则返回null。
+为了表示给定链表中的环，这里使用pos来表示链表尾连接到链表中的位置(索引从0开始)。如果pos是-1，则在该链中没有环。(不能修改给定的链表)
+示例1： 输入：head = [3,2,0,-4], pos = 1 输出：tail connects to node index 1 解释：链表中有一个环，其尾部连接到第二个节点。 示例2： 输入：head = [1,2], pos = 0 输出：tail connects to node index 0 解释：链表中有一个环，其尾部连接到第一个节点。 示例3： 输入：head = [1], pos = -1 输出：no cycle 解释：链表中没有环。 算法（双指针）： 快指针每次走两步，慢指针每次走一步，因此快指针走过的路程f一定是慢指针走过路程s的两倍，即f = 2s;假设从链表头到环入口的距离为a，环长度为b，则当快慢指针第一次相遇时，快指针一定比慢指针多走了n个环的长度，即f - s = nb；由这两个式子可以得到第一次相遇时慢指针走了nb的距离。易得环入口一定是a&#43;nb，因此再让慢指针走a步，一定是环入口的位置。
+题解： public class Solution { public ListNode detectCycle(ListNode head) { if (head == null || head.next == null) return null; ListNode fast = head; ListNode slow = head; while (true) { if (fast == null || fast." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A82/" />
+<meta property="article:published_time" content="2020-02-03T13:32:54+08:00" />
+<meta property="article:modified_time" content="2020-02-03T13:32:54+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[数据结构]链表  环形链表2</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 3, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="--2">[数据结构]链表&ndash;环形链表2</h3>
+<hr>
+<h3 id="heading">题目描述</h3>
+<p>给定一个链表，返回链表开始入环的第一个结点。如果链表无环，则返回null。</p>
+<p>为了表示给定链表中的环，这里使用pos来表示链表尾连接到链表中的位置(索引从0开始)。如果pos是-1，则在该链中没有环。(不能修改给定的链表)</p>
+<h6 id="1">示例1：</h6>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="img"></p>
+<pre><code>输入：head = [3,2,0,-4], pos = 1
+输出：tail connects to node index 1
+解释：链表中有一个环，其尾部连接到第二个节点。
+</code></pre><h6 id="2">示例2：</h6>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="img"></p>
+<pre><code>输入：head = [1,2], pos = 0
+输出：tail connects to node index 0
+解释：链表中有一个环，其尾部连接到第一个节点。
+</code></pre><h6 id="3">示例3：</h6>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt="img"></p>
+<pre><code>输入：head = [1], pos = -1
+输出：no cycle
+解释：链表中没有环。
+</code></pre><h4 id="heading-1">算法（双指针）：</h4>
+<p>快指针每次走两步，慢指针每次走一步，因此快指针走过的路程f一定是慢指针走过路程s的两倍，即f = 2s;假设从链表头到环入口的距离为a，环长度为b，则当快慢指针第一次相遇时，快指针一定比慢指针多走了n个环的长度，即f - s = nb；由这两个式子可以得到第一次相遇时慢指针走了nb的距离。易得环入口一定是a+nb，因此再让慢指针走a步，一定是环入口的位置。</p>
+<h4 id="heading-2">题解：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">detectCycle</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        ListNode fast <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        ListNode slow <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+                slow<span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+                fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">=</span><span style="color:#f92672">=</span> slow<span style="color:#f92672">)</span>
+                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        fast <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>slow <span style="color:#f92672">!</span><span style="color:#f92672">=</span> fast<span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> fast<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="heading-3">复杂度：</h4>
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)，双指针使用常数大小的额外空间。</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2020 13:32:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2020 17:07:15 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  重排链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Tue, 04 Feb 2020 17:07:15 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/</guid>
+      <description>[数据结构]链表&amp;ndash;重排链表  题目描述 给定一个单链表L：L0-&amp;gt;L1-&amp;gt;&amp;hellip;-&amp;gt;Ln-1-&amp;gt;Ln.
+将其重新排列后变为： L0-&amp;gt;Ln-&amp;gt;L1-&amp;gt;Ln-1-&amp;gt;L2-&amp;gt;Ln-2-&amp;gt;&amp;hellip;
+示例1： 给定链表 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 重新排列为 1-&amp;gt;4-&amp;gt;2-&amp;gt;3. 示例2： 给定链表 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, 重新排列为 1-&amp;gt;5-&amp;gt;2-&amp;gt;4-&amp;gt;3. 算法： 先将链表中的元素存入数组中，再利用头尾两个指针依次将结点重新连接
+题解： class Solution { public void reorderList(ListNode head) { if (head == null) return; List&amp;lt;ListNode&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); ListNode cur = head; while (cur != null) { list.add(cur); cur = cur.next; } int first = 0; int last = list.size()-1; while (first != last) { list.get(first).next = list.get(last); first++; if (first == last) break; list.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  环形链表2</title>

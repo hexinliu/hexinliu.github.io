@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2020 17:07:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 09:58:37 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  对链表进行插入排序</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Wed, 05 Feb 2020 09:58:37 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</guid>
+      <description>[数据结构]链表&amp;ndash;对链表进行插入排序  题目描述 对链表进行插入排序
+示例1： 输入: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 输出: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 示例2： 输入: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 输出: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 插入排序算法： 1.插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出链表。
+2.每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。
+3.重复直到所有输入数据插入完为止。
+题解： class Solution { public ListNode insertionSortList(ListNode head) { if (head == null || head.next == null) return head; ListNode sentinel = new ListNode(-1); sentinel.next = head; ListNode pre = sentinel; ListNode cur = head; ListNode last; while (cur != null) { last = cur.next; if (last != null &amp;amp;&amp;amp; cur.val &amp;gt; last.</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  重排链表</title>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>归并排序 // Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://hexinliu.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="归并排序"/>
+<meta name="twitter:description" content="归并排序 是一种递归的排序算法。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。
+优点：归并排序能够保证将任意长度为N的数组排序所需时间和NlogN成正比。
+缺点：它所需的额外空间和N成正比。
+ 原地归并的抽象方法 public static void merge(Comparable[] a, int lo, int mid, int hi) { //将a[lo...mid]和a[mid&#43;1...hi]归并  int i = lo, j = mid &#43; 1; //将所有元素复制到一个辅助数组中，为了以后将结果放回原数组中  for (int k = lo; k &lt;= hi; k&#43;&#43;) { aux[k] = a[k]; } //归并回a[lo...hi]  for (int k = lo; k &lt;= hi; k&#43;&#43;) { //左半边用尽（取右半边的元素）  if (i &gt; mid) a[k] = aux[j&#43;&#43;]; //右半边用尽（取左半边元素）  else if (j &gt; hi) a[k] = aux[i&#43;&#43;]; //右半边当前元素小于左半边当前元素（取右半边元素）  else if (less(aus[j],aux[i])) a[k] = aux[j&#43;&#43;]; //右半边当前元素大于左半边当前元素（取左半边元素）  else a[k] = aux[i&#43;&#43;]; } }  自顶向下的归并排序 public class Merge { //声明归并排序需要的辅助数组  private static Comparable[] aux; public static void sort(Comparable[] a) { //一次性分配空间  aux = new Comparable[a."/>
+
+    <meta property="og:title" content="归并排序" />
+<meta property="og:description" content="归并排序 是一种递归的排序算法。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。
+优点：归并排序能够保证将任意长度为N的数组排序所需时间和NlogN成正比。
+缺点：它所需的额外空间和N成正比。
+ 原地归并的抽象方法 public static void merge(Comparable[] a, int lo, int mid, int hi) { //将a[lo...mid]和a[mid&#43;1...hi]归并  int i = lo, j = mid &#43; 1; //将所有元素复制到一个辅助数组中，为了以后将结果放回原数组中  for (int k = lo; k &lt;= hi; k&#43;&#43;) { aux[k] = a[k]; } //归并回a[lo...hi]  for (int k = lo; k &lt;= hi; k&#43;&#43;) { //左半边用尽（取右半边的元素）  if (i &gt; mid) a[k] = aux[j&#43;&#43;]; //右半边用尽（取左半边元素）  else if (j &gt; hi) a[k] = aux[i&#43;&#43;]; //右半边当前元素小于左半边当前元素（取右半边元素）  else if (less(aus[j],aux[i])) a[k] = aux[j&#43;&#43;]; //右半边当前元素大于左半边当前元素（取左半边元素）  else a[k] = aux[i&#43;&#43;]; } }  自顶向下的归并排序 public class Merge { //声明归并排序需要的辅助数组  private static Comparable[] aux; public static void sort(Comparable[] a) { //一次性分配空间  aux = new Comparable[a." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hexinliu.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" />
+<meta property="article:published_time" content="2020-02-06T19:05:04+08:00" />
+<meta property="article:modified_time" content="2020-02-06T19:05:04+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://hexinliu.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">归并排序</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 6, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="heading">归并排序</h3>
+<p>是一种递归的排序算法。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。</p>
+<p>优点：归并排序能够保证将任意长度为N的数组排序所需时间和NlogN成正比。</p>
+<p>缺点：它所需的额外空间和N成正比。</p>
+<hr>
+<h4 id="heading-1">原地归并的抽象方法</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> lo<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> mid<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> hi<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#75715e">//将a[lo...mid]和a[mid+1...hi]归并
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> lo<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#75715e">//将所有元素复制到一个辅助数组中，为了以后将结果放回原数组中
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> lo<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> hi<span style="color:#f92672">;</span> k<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        aux<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#75715e">//归并回a[lo...hi]
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> lo<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> hi<span style="color:#f92672">;</span> k<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//左半边用尽（取右半边的元素）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span> mid<span style="color:#f92672">)</span>
+            a<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//右半边用尽（取左半边元素）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;</span> hi<span style="color:#f92672">)</span>
+            a<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//右半边当前元素小于左半边当前元素（取右半边元素）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>less<span style="color:#f92672">(</span>aus<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">,</span>aux<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+            a<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//右半边当前元素大于左半边当前元素（取左半边元素）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span>
+            a<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h4 id="heading-2">自顶向下的归并排序</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Merge</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#75715e">//声明归并排序需要的辅助数组
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Comparable<span style="color:#f92672">[</span><span style="color:#f92672">]</span> aux<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//一次性分配空间
+</span><span style="color:#75715e"></span>        aux <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Comparable<span style="color:#f92672">[</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        sort<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>0<span style="color:#f92672">,</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> lo<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> hi<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//将数组a[lo...hi]排序
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>hi <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> lo<span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> lo <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>hi<span style="color:#f92672">-</span>lo<span style="color:#f92672">)</span><span style="color:#f92672">/</span>2<span style="color:#f92672">;</span>
+        <span style="color:#75715e">//将左半边排序
+</span><span style="color:#75715e"></span>        sort<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>lo<span style="color:#f92672">,</span>mid<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//将右半边排序
+</span><span style="color:#75715e"></span>        sort<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>mid<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span>hi<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//归并结果
+</span><span style="color:#75715e"></span>        merge<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>lo<span style="color:#f92672">,</span>mid<span style="color:#f92672">,</span>hi<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h4 id="heading-3">自底向上的归并排序</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*自底向上的归并排序会多次遍历整个数组，根据子数组的大小进行两两归并。子数组的大小sz的初始值为1，每次加倍。最后一个子数组的大小只有在数组大小是sz的偶数倍的时候才会等于sz(否则小于sz)。
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MergeBU</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#75715e">//声明归并排序所需要的辅助数组
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Comparable<span style="color:#f92672">[</span><span style="color:#f92672">]</span> aux<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>Comparable<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//进行lgN次两两归并
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        aux <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Comparable<span style="color:#f92672">[</span>N<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">//sz:子数组大小
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> sz <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> sz <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> sz <span style="color:#f92672">=</span> sz<span style="color:#f92672">+</span>sz<span style="color:#f92672">)</span>
+            <span style="color:#75715e">//lo：子数组索引
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> lo <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> lo <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">-</span>sz<span style="color:#f92672">;</span> lo <span style="color:#f92672">+</span><span style="color:#f92672">=</span> sz<span style="color:#f92672">+</span>sz<span style="color:#f92672">)</span>
+                merge<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> lo<span style="color:#f92672">,</span> lo<span style="color:#f92672">+</span>sz<span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>lo<span style="color:#f92672">+</span>sz<span style="color:#f92672">+</span>sz<span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> N<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

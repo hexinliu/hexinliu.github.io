@@ -6,10 +6,21 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Feb 2020 19:05:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 17:23:05 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[数据结构]链表  奇偶链表</title>
+      <link>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%A5%87%E5%81%B6%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Tue, 11 Feb 2020 17:23:05 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8-%E5%A5%87%E5%81%B6%E9%93%BE%E8%A1%A8/</guid>
+      <description>[数据结构]链表&amp;ndash;奇偶链表  题目描述 给定一个链表，把所有的奇数结点和偶数结点分别排在一起(奇偶指的是结点编号的奇偶性)。
+算法： 遍历链表，用两个指针分别指向第一个奇数和偶数结点，并向后依次连接下一个奇数和偶数结点，形成只有奇数结点和只有偶数结点的两条链，最后将两条链拼接起来。
+题解： class Solution { public ListNode oddEvenList(ListNode head) { if (head == null ) return null; ListNode ji = head; ListNode ou = head.next; ListNode ou_head = ou; while (ou != null &amp;amp;&amp;amp; ou.next != null) { ji.next = ou.next; ji = ji.next; ou.next = ji.next; ou = ou.next; } ji.next = ou_head; return head; } } 复杂度：  时间复杂度：O(n) 空间复杂度：O(1)  </description>
+    </item>
     
     <item>
       <title>归并排序</title>

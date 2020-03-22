@@ -6,10 +6,26 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2020 17:23:05 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 19:31:46 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>多路复用的不同方式</title>
+      <link>https://hexinliu.github.io/post/%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E4%B8%8D%E5%90%8C%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sun, 22 Mar 2020 19:31:46 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E4%B8%8D%E5%90%8C%E6%96%B9%E5%BC%8F/</guid>
+      <description>多路复用是通信中常用的技术，在不同的应用场合中可以采用不同的多路复用方式，一般有以下四种多路复用方式： 1.频分复用
+按频率不同划分为不同信道，用户分到一个频带后，在通信过程中自始至终都占用这个频带，频分复用的所有用户在同样的时间占用不同的频带资源。eg:用在ADSL宽带（普通家用电话线拨号宽带）接入中。
+2.时分复用
+按时间不同划分为不同信道，每一个时分复用的用户在每一个TDM帧中占用固定序列号的时隙，时分复用的所有用户在不同时间占用同样的频带宽度。eg：一条E1信道复用32路PCM信号。一条T1信道复用24路PCM信号。
+3.码分复用
+常用的是码分多址（CDMA），每一个用户可以在同样的时间使用同一个频带进行通信，由于各用户使用经过挑选的不同码型，并且必须两两正交，因此各用户之间不会造成干扰。码分复用最初用于军事通信，这种系统发送的信号有很强的抗干扰能力，其频谱类似于白噪声，不易被敌人发现。后来才广泛用户民用的移动通信中，它的优越性在于：提高通信的话音质量和数据传输的可靠性，减少干扰对通信的影响，增大通信系统的容量，降低手机的平均发射功率等。eg：用于移动电话射频通信中。
+4.波分复用
+将两种或多种不同波长的光载波信号（携带各种信息）在发送端经复用器(亦称合波器，Multiplexer)汇合在一起，并耦合到光线路的同一根光纤中进行传输的技术；在接收端，经解复用器(亦称分波器或称去复用器，Demultiplexer)将各种波长的光载波分离，然后由光接收机作进一步处理以恢复原信号。这种在同一根光纤中同时传输两个或众多不同波长光信号的技术，称为波分复用。eg：光通信时用此方式在一根光纤中可同时传输多路信号。</description>
+    </item>
     
     <item>
       <title>[数据结构]链表  奇偶链表</title>

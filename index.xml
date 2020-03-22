@@ -6,10 +6,19 @@
     <description>Recent content on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2020 19:31:46 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 20:35:02 +0800</lastBuildDate>
     
 	<atom:link href="https://hexinliu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>网络中的数据交换方式</title>
+      <link>https://hexinliu.github.io/post/%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sun, 22 Mar 2020 20:35:02 +0800</pubDate>
+      
+      <guid>https://hexinliu.github.io/post/%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%96%B9%E5%BC%8F/</guid>
+      <description>网络中的数据交换方式 电路交换 报文交换 分组交换 </description>
+    </item>
     
     <item>
       <title>多路复用的不同方式</title>
